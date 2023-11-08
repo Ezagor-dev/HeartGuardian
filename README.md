@@ -9,6 +9,10 @@
 - **HealthKit Integration:** Seamlessly connect to HealthKit to access and visualize your heart rate data in a user-friendly interface.
 
 - **Heart Rate Warnings:** HeartGuardian issues warnings if your heart rate exceeds a predefined threshold (e.g., 100 bpm), helping you stay vigilant about your well-being.
+<p align="center">
+<img src="https://github.com/Ezagor-dev/HeartGuardian/assets/45847677/ca50a51d-2293-4097-ad9f-cc26edaf0b5a" width="200" height="400">
+</p>
+
 
 - **Simple and Informative UI:** The app's user-friendly interface displays heart rate data in a clear and concise manner, making it easy for users to monitor their vital signs.
 
@@ -25,3 +29,9 @@
 4. Receive alerts if your heart rate exceeds the set threshold.
 
 5. Stay informed and take control of your cardiovascular health with HeartGuardian.
+
+
+<p align="center">
+    <img src="https://github.com/Ezagor-dev/HeartGuardian/assets/45847677/d5ddf5f2-4c09-4234-9a04-1206fa834029" width="200" height="400">
+</p>
+
