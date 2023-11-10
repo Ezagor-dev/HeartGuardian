@@ -23,6 +23,7 @@
 		E6A2B0772AFAA8C0007DBE72 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E6A2B0792AFAA8C0007DBE72 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		E6A2B07C2AFAA8C0007DBE72 /* HeartGuardian.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HeartGuardian.xcdatamodel; sourceTree = "<group>"; };
+		E6A2B0832AFAA9CD007DBE72 /* HeartGuardian.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HeartGuardian.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +56,7 @@
 		E6A2B06F2AFAA8BE007DBE72 /* HeartGuardian */ = {
 			isa = PBXGroup;
 			children = (
+				E6A2B0832AFAA9CD007DBE72 /* HeartGuardian.entitlements */,
 				E6A2B0702AFAA8BE007DBE72 /* HeartGuardianApp.swift */,
 				E6A2B0722AFAA8BE007DBE72 /* ContentView.swift */,
 				E6A2B0742AFAA8C0007DBE72 /* Assets.xcassets */,
@@ -272,12 +274,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HeartGuardian/HeartGuardian.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HeartGuardian/Preview Content\"";
 				DEVELOPMENT_TEAM = Q6BH8KCYLZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires access to your heart rate data for health monitoring.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -301,12 +305,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HeartGuardian/HeartGuardian.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HeartGuardian/Preview Content\"";
 				DEVELOPMENT_TEAM = Q6BH8KCYLZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires access to your heart rate data for health monitoring.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

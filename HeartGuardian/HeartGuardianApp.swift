@@ -8,13 +8,11 @@
 import SwiftUI
 
 @main
-struct HeartGuardianApp: App {
-    let persistenceController = PersistenceController.shared
-
+struct YourApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
+
