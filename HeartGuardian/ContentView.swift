@@ -3,7 +3,7 @@
 //  HeartGuardian
 //
 //  Created by Ezagor on 7.11.2023.
-//10 seconds
+//10 seconds.
 
 import SwiftUI
 import HealthKit
