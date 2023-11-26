@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6348AF62B12D926003D78AD /* HeartGuardianWatchAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6348AF52B12D926003D78AD /* HeartGuardianWatchAppApp.swift */; };
+		E6348AF82B12D926003D78AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6348AF72B12D926003D78AD /* ContentView.swift */; };
+		E6348AFA2B12D928003D78AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6348AF92B12D928003D78AD /* Assets.xcassets */; };
+		E6348AFD2B12D928003D78AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6348AFC2B12D928003D78AD /* Preview Assets.xcassets */; };
+		E6348B002B12D928003D78AD /* HeartGuardianWatchApp Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E6348AF32B12D926003D78AD /* HeartGuardianWatchApp Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E6348B062B12D9F3003D78AD /* HeartRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6348B052B12D9F3003D78AD /* HeartRateManager.swift */; };
+		E6348B082B12DF49003D78AD /* WCSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6348B072B12DF49003D78AD /* WCSessionManager.swift */; };
+		E6348B0A2B12DF64003D78AD /* HeartRateObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6348B092B12DF64003D78AD /* HeartRateObservable.swift */; };
 		E6A2B0712AFAA8BE007DBE72 /* HeartGuardianApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A2B0702AFAA8BE007DBE72 /* HeartGuardianApp.swift */; };
 		E6A2B0732AFAA8BE007DBE72 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A2B0722AFAA8BE007DBE72 /* ContentView.swift */; };
 		E6A2B0752AFAA8C0007DBE72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6A2B0742AFAA8C0007DBE72 /* Assets.xcassets */; };
@@ -15,7 +23,40 @@
 		E6A2B07D2AFAA8C0007DBE72 /* HeartGuardian.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E6A2B07B2AFAA8C0007DBE72 /* HeartGuardian.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E6348AFE2B12D928003D78AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6A2B0652AFAA8BE007DBE72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6348AF22B12D926003D78AD;
+			remoteInfo = "HeartGuardianWatchApp Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E6348B042B12D928003D78AD /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				E6348B002B12D928003D78AD /* HeartGuardianWatchApp Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		E61AFA4D2B1378310040E8EE /* HeartGuardianWatchApp Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HeartGuardianWatchApp Watch App.entitlements"; sourceTree = "<group>"; };
+		E6348AF32B12D926003D78AD /* HeartGuardianWatchApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HeartGuardianWatchApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6348AF52B12D926003D78AD /* HeartGuardianWatchAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartGuardianWatchAppApp.swift; sourceTree = "<group>"; };
+		E6348AF72B12D926003D78AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E6348AF92B12D928003D78AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E6348AFC2B12D928003D78AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E6348B052B12D9F3003D78AD /* HeartRateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateManager.swift; sourceTree = "<group>"; };
+		E6348B072B12DF49003D78AD /* WCSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSessionManager.swift; sourceTree = "<group>"; };
+		E6348B092B12DF64003D78AD /* HeartRateObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateObservable.swift; sourceTree = "<group>"; };
 		E6A2B06D2AFAA8BE007DBE72 /* HeartGuardian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeartGuardian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6A2B0702AFAA8BE007DBE72 /* HeartGuardianApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartGuardianApp.swift; sourceTree = "<group>"; };
 		E6A2B0722AFAA8BE007DBE72 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,6 +68,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E6348AF02B12D926003D78AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E6A2B06A2AFAA8BE007DBE72 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +85,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E6348AF42B12D926003D78AD /* HeartGuardianWatchApp Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				E61AFA4D2B1378310040E8EE /* HeartGuardianWatchApp Watch App.entitlements */,
+				E6348AF52B12D926003D78AD /* HeartGuardianWatchAppApp.swift */,
+				E6348AF72B12D926003D78AD /* ContentView.swift */,
+				E6348AF92B12D928003D78AD /* Assets.xcassets */,
+				E6348AFB2B12D928003D78AD /* Preview Content */,
+				E6348B052B12D9F3003D78AD /* HeartRateManager.swift */,
+			);
+			path = "HeartGuardianWatchApp Watch App";
+			sourceTree = "<group>";
+		};
+		E6348AFB2B12D928003D78AD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E6348AFC2B12D928003D78AD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		E6A2B0642AFAA8BE007DBE72 = {
 			isa = PBXGroup;
 			children = (
 				E6A2B06F2AFAA8BE007DBE72 /* HeartGuardian */,
+				E6348AF42B12D926003D78AD /* HeartGuardianWatchApp Watch App */,
 				E6A2B06E2AFAA8BE007DBE72 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				E6A2B06D2AFAA8BE007DBE72 /* HeartGuardian.app */,
+				E6348AF32B12D926003D78AD /* HeartGuardianWatchApp Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,6 +134,8 @@
 				E6A2B0792AFAA8C0007DBE72 /* Persistence.swift */,
 				E6A2B07B2AFAA8C0007DBE72 /* HeartGuardian.xcdatamodeld */,
 				E6A2B0762AFAA8C0007DBE72 /* Preview Content */,
+				E6348B072B12DF49003D78AD /* WCSessionManager.swift */,
+				E6348B092B12DF64003D78AD /* HeartRateObservable.swift */,
 			);
 			path = HeartGuardian;
 			sourceTree = "<group>";
@@ -78,6 +151,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E6348AF22B12D926003D78AD /* HeartGuardianWatchApp Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6348B012B12D928003D78AD /* Build configuration list for PBXNativeTarget "HeartGuardianWatchApp Watch App" */;
+			buildPhases = (
+				E6348AEF2B12D926003D78AD /* Sources */,
+				E6348AF02B12D926003D78AD /* Frameworks */,
+				E6348AF12B12D926003D78AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HeartGuardianWatchApp Watch App";
+			productName = "HeartGuardianWatchApp Watch App";
+			productReference = E6348AF32B12D926003D78AD /* HeartGuardianWatchApp Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 		E6A2B06C2AFAA8BE007DBE72 /* HeartGuardian */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6A2B0802AFAA8C0007DBE72 /* Build configuration list for PBXNativeTarget "HeartGuardian" */;
@@ -85,10 +175,12 @@
 				E6A2B0692AFAA8BE007DBE72 /* Sources */,
 				E6A2B06A2AFAA8BE007DBE72 /* Frameworks */,
 				E6A2B06B2AFAA8BE007DBE72 /* Resources */,
+				E6348B042B12D928003D78AD /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E6348AFF2B12D928003D78AD /* PBXTargetDependency */,
 			);
 			name = HeartGuardian;
 			productName = HeartGuardian;
@@ -102,9 +194,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					E6348AF22B12D926003D78AD = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
 					E6A2B06C2AFAA8BE007DBE72 = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -124,11 +219,21 @@
 			projectRoot = "";
 			targets = (
 				E6A2B06C2AFAA8BE007DBE72 /* HeartGuardian */,
+				E6348AF22B12D926003D78AD /* HeartGuardianWatchApp Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E6348AF12B12D926003D78AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6348AFD2B12D928003D78AD /* Preview Assets.xcassets in Resources */,
+				E6348AFA2B12D928003D78AD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E6A2B06B2AFAA8BE007DBE72 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -141,12 +246,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E6348AEF2B12D926003D78AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6348AF82B12D926003D78AD /* ContentView.swift in Sources */,
+				E6348B062B12D9F3003D78AD /* HeartRateManager.swift in Sources */,
+				E6348AF62B12D926003D78AD /* HeartGuardianWatchAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E6A2B0692AFAA8BE007DBE72 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E6A2B07A2AFAA8C0007DBE72 /* Persistence.swift in Sources */,
 				E6A2B07D2AFAA8C0007DBE72 /* HeartGuardian.xcdatamodeld in Sources */,
+				E6348B082B12DF49003D78AD /* WCSessionManager.swift in Sources */,
+				E6348B0A2B12DF64003D78AD /* HeartRateObservable.swift in Sources */,
 				E6A2B0732AFAA8BE007DBE72 /* ContentView.swift in Sources */,
 				E6A2B0712AFAA8BE007DBE72 /* HeartGuardianApp.swift in Sources */,
 			);
@@ -154,7 +271,88 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E6348AFF2B12D928003D78AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6348AF22B12D926003D78AD /* HeartGuardianWatchApp Watch App */;
+			targetProxy = E6348AFE2B12D928003D78AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		E6348B022B12D928003D78AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "HeartGuardianWatchApp Watch App/HeartGuardianWatchApp Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HeartGuardianWatchApp Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = Q6BH8KCYLZ;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = HeartGuardianWatchApp;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Access to heart rate data is needed to monitor your workout progress.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Access to heart rate data is needed to monitor your workout progress.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Access to heart rate data is needed to monitor your workout progress.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ezagor.HeartGuardian;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ezagor.HeartGuardian.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		E6348B032B12D928003D78AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "HeartGuardianWatchApp Watch App/HeartGuardianWatchApp Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HeartGuardianWatchApp Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = Q6BH8KCYLZ;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = HeartGuardianWatchApp;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Access to heart rate data is needed to monitor your workout progress.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Access to heart rate data is needed to monitor your workout progress.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Access to heart rate data is needed to monitor your workout progress.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ezagor.HeartGuardian;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ezagor.HeartGuardian.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
 		E6A2B07E2AFAA8C0007DBE72 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -276,6 +474,7 @@
 		E6A2B0812AFAA8C0007DBE72 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HeartGuardian/HeartGuardian.entitlements;
@@ -307,6 +506,7 @@
 		E6A2B0822AFAA8C0007DBE72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HeartGuardian/HeartGuardian.entitlements;
@@ -338,6 +538,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E6348B012B12D928003D78AD /* Build configuration list for PBXNativeTarget "HeartGuardianWatchApp Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6348B022B12D928003D78AD /* Debug */,
+				E6348B032B12D928003D78AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E6A2B0682AFAA8BE007DBE72 /* Build configuration list for PBXProject "HeartGuardian" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
