@@ -1,4 +1,3 @@
-//
 //  ContentView.swift
 //  HeartGuardian
 //
@@ -32,8 +31,18 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
             
-            if heartRate > 100 {
+            if heartRate > 90 {
                 Text("Yüksek Kalp Atış Hızı")
+                    .font(.headline)
+                    .foregroundColor(.red)
+                    .padding()
+            }else if heartRate < 50 && heartRate > 0{
+                Text("Düşük Kalp Atış Hızı")
+                    .font(.headline)
+                    .foregroundColor(.red)
+                    .padding()
+            }else if heartRate == 0{
+                Text("Bileklik Takılı Olmayabilir. \n\n0 Kalp Atış Hızı")
                     .font(.headline)
                     .foregroundColor(.red)
                     .padding()
@@ -62,27 +71,38 @@ struct ContentView: View {
     }
     
     func startHeartRateMonitoring() {
-        // Zamanlayıcı oluştur ve her 10 saniyede bir ölçüm yap
-        Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { timer in
-            self.fetchLatestHeartRateSample()
-        }
+        fetchLatestHeartRateSample()
     }
     
     func fetchLatestHeartRateSample() {
-        let heartRateType = HKQuantityType.quantityType(forIdentifier: .heartRate)!
-        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
-        let query = HKSampleQuery(sampleType: heartRateType, predicate: nil, limit: 1, sortDescriptors: [sortDescriptor]) { (query, results, error) in
-            if let sample = results?.first as? HKQuantitySample {
-                let heartRate = sample.quantity.doubleValue(for: HKUnit.count().unitDivided(by: .minute()))
+        guard let heartRateType = HKObjectType.quantityType(forIdentifier: .heartRate) else {
+            print("Heart Rate Sample Type is unavailable.")
+            return
+        }
+
+        let query = HKAnchoredObjectQuery(type: heartRateType, predicate: nil, anchor: nil, limit: HKObjectQueryNoLimit, resultsHandler: { (query, samples, deletedObjects, anchor, error) in
+            guard let samples = samples as? [HKQuantitySample], let mostRecentSample = samples.last else {
+                print("Unable to query for heart rate: \(error?.localizedDescription ?? "unknown error")")
+                return
+            }
+            
+            let heartRate = mostRecentSample.quantity.doubleValue(for: HKUnit(from: "count/min"))
+            DispatchQueue.main.async {
                 self.heartRate = heartRate
-                print("Son kalp atış hızı: \(heartRate) bpm")
-                
-                if heartRate > 100 {
-                    print("Uyarı: Kalp atış hızı 100 bpm üzerinde!")
-                }
+            }
+        })
+
+        query.updateHandler = { (query, samples, deletedObjects, anchor, error) in
+            guard let samples = samples as? [HKQuantitySample], let mostRecentSample = samples.last else {
+                return
+            }
+            
+            let heartRate = mostRecentSample.quantity.doubleValue(for: HKUnit(from: "count/min"))
+            DispatchQueue.main.async {
+                self.heartRate = heartRate
             }
         }
-        
+
         healthStore.execute(query)
     }
 }
