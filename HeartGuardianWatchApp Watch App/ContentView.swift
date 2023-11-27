@@ -15,9 +15,13 @@ struct ContentView: View {
         VStack {
             Text("Heart Rate")
                 .font(.headline)
+            
 
             Text("\(heartRate, specifier: "%.0f") BPM")
                 .font(.title)
+                .padding()
+                .background(heartRateColor(for: heartRate))
+                .cornerRadius(10)
 
             // Additional UI components
         }
@@ -28,6 +32,16 @@ struct ContentView: View {
                     self.heartRate = heartRate
                 }
             }
+        }
+    }
+    func heartRateColor(for heartRate: Double) -> Color {
+        switch heartRate {
+        case 0..<60:
+            return .blue
+        case 60..<90:
+            return .green
+        default:
+            return .red
         }
     }
 }
