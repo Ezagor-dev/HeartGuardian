@@ -3,7 +3,7 @@
 //  HeartGuardianWatchApp Watch App
 //
 //  Created by Ezagor on 26.11.2023.
-//
+//and when I close the watchapp, data couldn't send to iphone. It should work background too.
 
 import SwiftUI
 
