@@ -11,15 +11,17 @@ import WatchConnectivity
 class HeartRateManager: NSObject, WCSessionDelegate {
     private var healthStore = HKHealthStore()
     private var heartRateQuery: HKQuery?
+    var viewModel: HeartRateViewModel
     
-    override init() {
-        super.init()
-        if WCSession.isSupported() {
-            WCSession.default.delegate = self
-            WCSession.default.activate()
+    init(viewModel: HeartRateViewModel) {
+            self.viewModel = viewModel
+            super.init()
+            if WCSession.isSupported() {
+                WCSession.default.delegate = self
+                WCSession.default.activate()
+            }
+            requestHealthKitAuthorization()
         }
-        requestHealthKitAuthorization()
-    }
 
     func requestHealthKitAuthorization() {
         guard HKHealthStore.isHealthDataAvailable() else {
@@ -40,29 +42,43 @@ class HeartRateManager: NSObject, WCSessionDelegate {
     }
 
     func startHeartRateMonitoring() {
-        let heartRateType = HKQuantityType.quantityType(forIdentifier: .heartRate)!
-        let query = HKAnchoredObjectQuery(type: heartRateType, predicate: nil, anchor: nil, limit: HKObjectQueryNoLimit, resultsHandler: { _, samples, _, _, error in
-            self.processHeartRateSamples(samples)
-        })
+            guard HKHealthStore.isHealthDataAvailable() else {
+                print("HealthKit is not available on this device.")
+                return
+            }
 
-        query.updateHandler = { _, samples, _, _, _ in
-            self.processHeartRateSamples(samples)
+            let heartRateType = HKObjectType.quantityType(forIdentifier: .heartRate)!
+            let query = HKAnchoredObjectQuery(type: heartRateType, predicate: nil, anchor: nil, limit: HKObjectQueryNoLimit) { [weak self] _, samples, _, _, error in
+                if let error = error {
+                    print("Error starting heart rate monitoring: \(error.localizedDescription)")
+                    return
+                }
+                self?.processHeartRateSamples(samples)
+            }
+
+            query.updateHandler = { [weak self] _, samples, _, _, _ in
+                self?.processHeartRateSamples(samples)
+            }
+
+            healthStore.execute(query)
+            heartRateQuery = query
         }
-
-        healthStore.execute(query)
-        heartRateQuery = query
-    }
 
     private func processHeartRateSamples(_ samples: [HKSample]?) {
         guard let heartRateSamples = samples as? [HKQuantitySample],
               let mostRecentSample = heartRateSamples.last else {
-            print("No heart rate samples available")
-                    return
+            return
         }
         
         let heartRate = mostRecentSample.quantity.doubleValue(for: HKUnit(from: "count/min"))
-        print("Fetched heart rate: \(heartRate)")
-        sendHeartRateToPhone(heartRate: heartRate)
+        DispatchQueue.main.async {
+            print("Fetched heart rate: \(heartRate)")
+            
+            self.viewModel.heartRate = heartRate
+            self.sendHeartRateToPhone(heartRate: heartRate)
+            //print("Updated ViewModel heart rate to: \(heartRate)")
+
+        }
     }
 
     

@@ -21,6 +21,7 @@
 		E6A2B0782AFAA8C0007DBE72 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6A2B0772AFAA8C0007DBE72 /* Preview Assets.xcassets */; };
 		E6A2B07A2AFAA8C0007DBE72 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A2B0792AFAA8C0007DBE72 /* Persistence.swift */; };
 		E6A2B07D2AFAA8C0007DBE72 /* HeartGuardian.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E6A2B07B2AFAA8C0007DBE72 /* HeartGuardian.xcdatamodeld */; };
+		E6A5F2552B152D7F002B20A8 /* HeartRateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5F2542B152D7F002B20A8 /* HeartRateViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		E6A2B0792AFAA8C0007DBE72 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		E6A2B07C2AFAA8C0007DBE72 /* HeartGuardian.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HeartGuardian.xcdatamodel; sourceTree = "<group>"; };
 		E6A2B0832AFAA9CD007DBE72 /* HeartGuardian.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HeartGuardian.entitlements; sourceTree = "<group>"; };
+		E6A5F2542B152D7F002B20A8 /* HeartRateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				E6348AF92B12D928003D78AD /* Assets.xcassets */,
 				E6348AFB2B12D928003D78AD /* Preview Content */,
 				E6348B052B12D9F3003D78AD /* HeartRateManager.swift */,
+				E6A5F2542B152D7F002B20A8 /* HeartRateViewModel.swift */,
 			);
 			path = "HeartGuardianWatchApp Watch App";
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				E6348AF82B12D926003D78AD /* ContentView.swift in Sources */,
 				E6348B062B12D9F3003D78AD /* HeartRateManager.swift in Sources */,
 				E6348AF62B12D926003D78AD /* HeartGuardianWatchAppApp.swift in Sources */,
+				E6A5F2552B152D7F002B20A8 /* HeartRateViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

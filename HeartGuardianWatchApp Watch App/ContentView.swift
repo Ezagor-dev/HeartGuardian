@@ -8,30 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var heartRate: Double = 0
-    let heartRateManager = HeartRateManager()
+    @StateObject private var viewModel = HeartRateViewModel()
+    
+    let heartRateManager: HeartRateManager
+    init() {
+            let viewModel = HeartRateViewModel()
+            self.heartRateManager = HeartRateManager(viewModel: viewModel)
+        self._viewModel = StateObject(wrappedValue: viewModel)
 
+        }
     var body: some View {
         VStack {
-            Text("Heart Rate")
-                .font(.headline)
-            
-
-            Text("\(heartRate, specifier: "%.0f") BPM")
-                .font(.title)
-                .padding()
-                .background(heartRateColor(for: heartRate))
+                    Text("Heart Rate: \(viewModel.heartRate, specifier: "%.0f") BPM")
+                        .font(.title)
+                        .padding()
+                        .background(heartRateColor(for: viewModel.heartRate))
                 .cornerRadius(10)
 
             // Additional UI components
         }
         .onAppear {
-            // Subscribe to heart rate updates
-            NotificationCenter.default.addObserver(forName: NSNotification.Name("HeartRateUpdate"), object: nil, queue: nil) { notification in
-                if let heartRate = notification.object as? Double {
-                    self.heartRate = heartRate
-                }
-            }
+            heartRateManager.startHeartRateMonitoring()
+
         }
     }
     func heartRateColor(for heartRate: Double) -> Color {
