@@ -15,6 +15,8 @@
 		E6348B062B12D9F3003D78AD /* HeartRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6348B052B12D9F3003D78AD /* HeartRateManager.swift */; };
 		E6348B082B12DF49003D78AD /* WCSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6348B072B12DF49003D78AD /* WCSessionManager.swift */; };
 		E6348B0A2B12DF64003D78AD /* HeartRateObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6348B092B12DF64003D78AD /* HeartRateObservable.swift */; };
+		E69D9AC62B166D32005323CB /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D9AC52B166D32005323CB /* LaunchScreenView.swift */; };
+		E69D9AC72B166D32005323CB /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D9AC52B166D32005323CB /* LaunchScreenView.swift */; };
 		E6A2B0712AFAA8BE007DBE72 /* HeartGuardianApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A2B0702AFAA8BE007DBE72 /* HeartGuardianApp.swift */; };
 		E6A2B0732AFAA8BE007DBE72 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A2B0722AFAA8BE007DBE72 /* ContentView.swift */; };
 		E6A2B0752AFAA8C0007DBE72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6A2B0742AFAA8C0007DBE72 /* Assets.xcassets */; };
@@ -58,6 +60,7 @@
 		E6348B052B12D9F3003D78AD /* HeartRateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateManager.swift; sourceTree = "<group>"; };
 		E6348B072B12DF49003D78AD /* WCSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSessionManager.swift; sourceTree = "<group>"; };
 		E6348B092B12DF64003D78AD /* HeartRateObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateObservable.swift; sourceTree = "<group>"; };
+		E69D9AC52B166D32005323CB /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		E6A2B06D2AFAA8BE007DBE72 /* HeartGuardian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeartGuardian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6A2B0702AFAA8BE007DBE72 /* HeartGuardianApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartGuardianApp.swift; sourceTree = "<group>"; };
 		E6A2B0722AFAA8BE007DBE72 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,6 +142,7 @@
 				E6A2B0762AFAA8C0007DBE72 /* Preview Content */,
 				E6348B072B12DF49003D78AD /* WCSessionManager.swift */,
 				E6348B092B12DF64003D78AD /* HeartRateObservable.swift */,
+				E69D9AC52B166D32005323CB /* LaunchScreenView.swift */,
 			);
 			path = HeartGuardian;
 			sourceTree = "<group>";
@@ -253,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E69D9AC72B166D32005323CB /* LaunchScreenView.swift in Sources */,
 				E6348AF82B12D926003D78AD /* ContentView.swift in Sources */,
 				E6348B062B12D9F3003D78AD /* HeartRateManager.swift in Sources */,
 				E6348AF62B12D926003D78AD /* HeartGuardianWatchAppApp.swift in Sources */,
@@ -266,6 +271,7 @@
 			files = (
 				E6A2B07A2AFAA8C0007DBE72 /* Persistence.swift in Sources */,
 				E6A2B07D2AFAA8C0007DBE72 /* HeartGuardian.xcdatamodeld in Sources */,
+				E69D9AC62B166D32005323CB /* LaunchScreenView.swift in Sources */,
 				E6348B082B12DF49003D78AD /* WCSessionManager.swift in Sources */,
 				E6348B0A2B12DF64003D78AD /* HeartRateObservable.swift in Sources */,
 				E6A2B0732AFAA8BE007DBE72 /* ContentView.swift in Sources */,
@@ -491,7 +497,7 @@
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires access to your heart rate data for health monitoring.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreenView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -522,7 +528,7 @@
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires access to your heart rate data for health monitoring.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreenView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -29,7 +29,7 @@ struct ContentView: View {
         switch heartRate {
         case 0..<60:
             return .blue
-        case 60..<100:
+        case 60..<90:
             return .green
         default:
             return .red
